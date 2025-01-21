@@ -11,16 +11,12 @@ function crearTarjetasProductosCarrito() {
   if (productos && productos.length > 0) {
     productos.forEach((producto) => {
       const nuevaBicicleta = document.createElement("div");
-      nuevaBicicleta.classList = "tarjeta-producto";
-      nuevaBicicleta.innerHTML = `
-    <img src="./img/productos/${producto.id}.jpg" alt="Giftcards 1">
-    <h3>${producto.nombre}</h3>
-    <span>$${producto.precio}</span>
-    <div>
-    <button>-</button>
-    <span class="cantidad">${producto.cantidad}</span>
-    <button>+</button>
-    </div>
+      nuevasgifcard.classList = "container-box";
+      nuevasgifcard.innerHTML = `
+        <img src="${producto.img}" alt="">
+        <h2 class="body-box2">${producto.dato}</h2>
+        <p class="footer-box2"><span>us</span>$${producto.precio}</p>
+        <button class="buy">Comprar</button>
     `;
       contenedorTarjetas.appendChild(nuevaBicicleta);
       nuevaBicicleta
@@ -49,7 +45,7 @@ crearTarjetasProductosCarrito();
 
 /** Actualiza el total de precio y unidades de la página del carrito */
 function actualizarTotales() {
-  const productos = JSON.parse(localStorage.getItem("bicicletas"));
+  const productos = JSON.parse(localStorage.getItem("Giftcards"));
   let cantidad = 0;
   let precio = 0;
   if (productos && productos.length > 0) {
@@ -74,7 +70,7 @@ document.getElementById("reiniciar").addEventListener("click", () => {
 
 /** Muestra o esconde el mensaje de que no hay nada en el carrito */
 function revisarMensajeVacio() {
-  const productos = JSON.parse(localStorage.getItem("bicicletas"));
+  const productos = JSON.parse(localStorage.getItem("Giftcards"));
   carritoVacioElement.classList.toggle("escondido", productos);
   totalesContainer.classList.toggle("escondido", !productos);
 }
