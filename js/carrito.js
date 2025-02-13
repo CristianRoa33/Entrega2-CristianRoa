@@ -10,7 +10,7 @@ function crearTarjetasProductosCarrito() {
   const productos = JSON.parse(localStorage.getItem("Giftcards"));
   if (productos && productos.length > 0) {
     productos.forEach((producto) => {
-      const nuevasgifcard = document.createElement("div");
+      const nuevaBicicleta = document.createElement("div");
       nuevasgifcard.classList = "container-box";
       nuevasgifcard.innerHTML = `
         <img src="${producto.img}" alt="">
@@ -18,8 +18,8 @@ function crearTarjetasProductosCarrito() {
         <p class="footer-box2"><span>us</span>$${producto.precio}</p>
         <button class="buy">Comprar</button>
     `;
-      contenedorTarjetas.appendChild(nuevasgifcard);
-      nuevasgifcard
+      contenedorTarjetas.appendChild(nuevaBicicleta);
+      nuevaBicicleta
         .getElementsByTagName("button")[0]
         .addEventListener("click", (e) => {
           const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];
@@ -27,7 +27,7 @@ function crearTarjetasProductosCarrito() {
           crearTarjetasProductosCarrito();
           actualizarTotales();
         });
-        nuevasgifcard
+      nuevaBicicleta
         .getElementsByTagName("button")[1]
         .addEventListener("click", (e) => {
           const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];

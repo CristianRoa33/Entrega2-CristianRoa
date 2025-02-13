@@ -3,14 +3,13 @@ body {
     padding: 0%;
     box-sizing: border-box;
     background: rgb(24,0,36);
-    background-color: #21D4FD;
-    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+background: linear-gradient(90deg, rgba(8, 12, 226, 0.808) 0%, rgba(22, 24, 158, 0.671) 35%, rgba(53, 36, 116, 0.733) 100%);
 }
 
 header {
     display: flex;
     justify-content: center;
-    margin: 100px 480px 100px;
+    margin: 100px 500px 100px;
     font-family:"Londrina Sketch", serif;
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #f3ecec;
@@ -41,24 +40,25 @@ header ul li a {
     font-size: 50px;
     margin-bottom: 2px;
 }
-header .cuentacarrito {
-    background-color: #e97509;
-    border-radius: 100%;
-    display: inline-block;
-    font-weight: 900;
-    width: 40px;
-    height: 50px;
-    aspect-ratio: 1;
-    text-align: center;
-    color: #ffff;
-    position: absolute;
-    font-size: 40px;
-}
-.carrito {
+header .carrito {
     width: 90%;
     height: 100px;
     position: relative;
     margin: 0 10px;
+}
+
+header .cuenta-carrito {
+    background-color: #e97509;
+    border-radius: 100%;
+    display: inline-block;
+    font-weight: 900;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1;
+    text-align: center;
+    color: #030303;
+    position: absolute;
+    font-size: 40px;
 }
 h1 {
     font-family: "Roboto Flex", serif;
@@ -71,14 +71,14 @@ h1 {
 .box2 {
     width: 400px;
     height: 500px;
-    background-color: rgba( 4, 4, 4, 0.2);
+    background-color: rgba( 5, 5, 5, 0.2);
     display: flex;
     color: #09e941;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #f5f3f7;
+    border: 2px solid #4d3672;
     border-radius: 70px;
-    box-shadow: 0 15px 25px rgba(247, 245, 245, 0.5);
+    box-shadow: 0 15px 25px rgba(196, 194, 194, 0.2);
     }
     
     #container-box {

@@ -10,9 +10,8 @@ function crearcontainerbox (productos){
         <h2 class="body-box2">${producto.dato}</h2>
         <p class="footer-box2"><span>us</span>$${producto.precio}</p>
         <button class="buy">Comprar</button>`
-        
         contenedorbox.appendChild(nuevasgifcard);
-        nuevasgifcard.getElementsByTagName("button")[0].addEventListener("click",() => agregarAlcarrito(producto))
+        nuevasgifcard.getElementsByTagName("button")[0].addEventListener("click",() => agregaralcarrito(producto))
     });
 }
 
