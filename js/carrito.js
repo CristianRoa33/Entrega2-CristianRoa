@@ -1,7 +1,7 @@
-const contenedorbox = document.getElementById("cart-container");
+const contenedorbox = document.getElementById("container-box");
 const cantidadElement = document.getElementById("cantidad");
 const precioElement = document.getElementById("precio");
-const carritoVacioElement = document.getElementById("carrito-vacio");
+const carritoVacioElement = document.getElementById("cuentacarrito");
 const totalesContainer = document.getElementById("totales");
 
 /** Crea las tarjetas de productos teniendo en cuenta lo guardado en localstorage */
@@ -10,7 +10,7 @@ function crearTarjetasProductosCarrito() {
   const productos = JSON.parse(localStorage.getItem("Giftcards"));
   if (productos && productos.length > 0) {
     productos.forEach((producto) => {
-      const nuevaBicicleta = document.createElement("div");
+      const nuevasgifcard = document.createElement("div");
       nuevasgifcard.classList = "container-box";
       nuevasgifcard.innerHTML = `
         <img src="${producto.img}" alt="">
@@ -18,8 +18,8 @@ function crearTarjetasProductosCarrito() {
         <p class="footer-box2"><span>us</span>$${producto.precio}</p>
         <button class="buy">Comprar</button>
     `;
-      contenedorTarjetas.appendChild(nuevaBicicleta);
-      nuevaBicicleta
+      contenedorTarjetas.appendChild(nuevasgifcard);
+      nuevasgifcard
         .getElementsByTagName("button")[0]
         .addEventListener("click", (e) => {
           const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];
@@ -27,7 +27,7 @@ function crearTarjetasProductosCarrito() {
           crearTarjetasProductosCarrito();
           actualizarTotales();
         });
-      nuevaBicicleta
+        nuevasgifcard
         .getElementsByTagName("button")[1]
         .addEventListener("click", (e) => {
           const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];
